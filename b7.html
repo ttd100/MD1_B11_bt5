@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let V = +prompt('Nhập số nguyên V:');
+    let arr=[1,2,3,4,5,6,7,8,9,10]
+
+    let check = false;
+
+    let vIndex = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (V == arr[i]) {
+            check = true;
+            vIndex = i;
+        }
+    }
+
+    if (check) {
+        for (let i = vIndex; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[arr.length - 1] = 0;
+    } else {
+        document.write('V = ${V} is not in the array!');
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i], '<br>')
+    }
+</script>
+</body>
+</html>

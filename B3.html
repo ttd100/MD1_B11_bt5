@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [23,2,5,6];
+    let min= a[0];
+    let max=a[0];
+    let total=0;
+    for (let i=0;i<a.length;i++){
+        total+=a[i]
+        if (min>a[i]){
+            min=a[i];
+        }
+    }
+    for (let j=0;j<a.length;j++){
+        if (max<a[j]){
+            max=a[j];
+        }
+    }
+    document.write("số trung bình trong mảng là: "+total/a.length+"<br>")
+    document.write("số nhỏ nhất là: "+min+"<br>")
+    document.write("số lớn nhất là: " +max)
+
+</script>
+</body>
+</html>
